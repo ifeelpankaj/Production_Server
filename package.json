@@ -8,15 +8,18 @@
     "test": "node test.js",
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
-    "prepare": "husky",
-    "lint": "eslint .",
-    "lint-fix":"eslint . --fix"
+    "lint": "eslint",
+    "lint-fix": "eslint --fix",
+    "format-check": "prettier . --check",
+    "format-fix":"prettier . --fix",
+    "prepare": "husky"
   },
   "author": "Pankaj",
   "license": "ISC",
   "lint-staged": {
     "*.ts": [
-      "npm run lint-fix"  
+      "npm run lint-fix",
+      "npm run format-fix"
     ]
   },
   "description": "",
@@ -27,9 +30,11 @@
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.5.1",
     "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
     "nodemon": "^3.1.4",
+    "prettier": "3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0"
