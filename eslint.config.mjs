@@ -9,9 +9,16 @@ export default tseslint.config({
             tsconfigRootDir: import.meta.dirname
         }
     },
+
     files: ['**/*.ts'],
-    extends: [eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked,eslintConfigPrettier],
+    extends: [eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked, eslintConfigPrettier],
     rules: {
+        '@typescript-eslint/no-unsafe-argument': 'error',
+        '@typescript-eslint/no-unsafe-argument': 'error',
+        '@typescript-eslint/no-unsafe-assignment': 'error',
+        '@typescript-eslint/no-unsafe-call': 'error',
+        '@typescript-eslint/no-unsafe-member-access': 'error',
+        '@typescript-eslint/no-unsafe-return': 'error',
         'no-console': 'error',
         'no-useless-catch': 0,
         quotes: ['error', 'single', { allowTemplateLiterals: true }]
